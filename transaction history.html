@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    h1 {
+        text-align: center;
+        background-color: rgb(55, 53, 50);
+        color:azure;
+  width: 1500px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: auto;
+}
+        
+        h2{text-align: center;}
+        * {
+          box-sizing: border-box;
+        }
+        
+        
+        .column {
+          float: left;
+          width: 50%;
+          padding: 10px;
+          height: 600px;
+          border:5px solid gray;
+          
+        }
+        .History{
+          text-align: left;
+         background-color: rgb(39, 43, 43);
+         padding: 20%;
+
+        }
+       
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+          width: 90px;
+          height: 90px;
+  
+          overflow: auto
+        }
+        </style>
+</head>
+<body>
+<h1 id="payment"> Transaction History</h1>
+
+<div class="row">
+    <div class="column" style="background-color:rgb(73, 74, 75);color:red">
+      <h2>Spent</h2>
+      <ol>
+        
+      </ol>
+    </div>
+    <div class="column" style="background-color:rgb(70, 74, 75);color:green">
+      <h2>Received</h2>
+      <ol>
+        
+      </ol>
+    </div>
+    <div class="History" >
+      <h2 style="text-align:lefttoleft;"> NET EXPENSE:</h2>
+      <table>
+     
+
+
+      </table>
+  </div>
+  </div>
+
+    
+</body>
+</html>
