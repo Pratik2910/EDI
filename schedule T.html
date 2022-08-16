@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule Transaction</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+      body {
+        /* overflow-y: hidden; */
+        font-family: "Poppins", sans-serif;
+        background-size: cover;
+        background-position: left top;
+      }
+
+      .container {
+        padding: 3rem;
+        margin: auto;
+        right: 10rem;
+        max-width: 40rem;
+        width: 80%;
+        backdrop-filter: blur(7px) saturate(53%);
+        -webkit-backdrop-filter: blur(7px) saturate(53%);
+        background-color: rgba(248, 248, 203, 0.18);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+      }
+      .container .title {
+        font-size: 25px;
+        font-weight: 500;
+        position: relative;
+      }
+      .container .title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 30px;
+        border-radius: 5px;
+        background-image: linear-gradient(to right, #f5ce62, #e85a19);
+      }
+      .content form .user-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px 0 12px 0;
+      }
+      form .user-details .input-box {
+        margin-bottom: 15px;
+        width: calc(100% / 2 - 20px);
+      }
+      form .input-box span.details {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+      .user-details .input-box input {
+        height: 45px;
+        width: 100%;
+        outline: none;
+        font-size: 16px;
+        border-radius: 5px;
+        padding-left: 15px;
+        border: 1px solid #ccc;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+      }
+      .user-details .input-box input:focus,
+      .user-details .input-box input:valid {
+        border-color: #b32f00;
+      }
+      form .function-details .function-title {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      form .category {
+        display: flex;
+        width: 80%;
+        margin: 14px 0;
+        justify-content: space-between;
+      }
+      form .category label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      /* CSS */
+      .button {
+        appearance: button;
+        background-color: #000;
+        background-image: none;
+        border: 1px solid #000;
+        border-radius: 4px;
+        box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 5px 10px 0;
+        overflow: visible;
+        padding: 12px 40px;
+        text-align: center;
+        text-transform: none;
+        touch-action: manipulation;
+        user-select: none;
+        -webkit-user-select: none;
+        vertical-align: middle;
+        white-space: nowrap;
+      }
+
+      .button:focus {
+        text-decoration: none;
+      }
+
+      .button:hover {
+        text-decoration: none;
+      }
+
+      .button:active {
+        box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+        outline: 0;
+      }
+
+      .button:not([disabled]):active {
+        box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+        transform: translate(2px, 2px);
+      }
+
+      @media (min-width: 768px) {
+        .button {
+          padding: 12px 50px;
+        }
+      }
+
+      @media (max-width: 800px) {
+        .container {
+          position: static;
+        }
+      }
+      @media (max-width: 584px) {
+        .container {
+          max-width: 100%;
+        }
+        form .user-details .input-box {
+          margin-bottom: 15px;
+          width: 90%;
+        }
+        form .category {
+          width: 100%;
+        }
+        .content form .user-details {
+          overflow-y: scroll;
+        }
+        .user-details::-webkit-scrollbar {
+          width: 5px;
+        }
+      }
+      @media (max-width: 459px) {
+        .container .content .category {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">Schedule Transaction</div>
+      <div class="content">
+        <form action="#">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">UPI Number</span>
+              <input type="text" placeholder="Enter UPI Id" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Amount</span>
+              <input type="number" placeholder="Enter The Amount" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Remarks</span>
+              <input type="text" placeholder="Enter Your Remarks" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Date</span>
+              <input type="date" placeholder="Enter Date" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Time</span>
+              <input type="time" placeholder="Enter Time" required />
+            </div>
+            <div class="input-box">
+              <span class="details">Frequency</span>
+              <input type="text" placeholder="Enter Frequency" required />
+            </div>
+          </div>
+          <button class="button" role="button">Pay</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
